@@ -15,16 +15,16 @@ import NewsHandler from "./Handlers/NewsHandler";
 
 if (!process.env.MONGO_URI) throw new Error("MONGO URL IS NOT PROVIDED");
 const client = new WAClient({
-  name: process.env.NAME || "Chitoge",
-  session: process.env.SESSION || "Chitoge",
-  prefix: process.env.PREFIX || ":",
-  mods: (process.env.MODS || "")
+  name: process.env.NAME || "Zenn,
+  session: process.env.SESSION || "session",
+  prefix: process.env.PREFIX || ".",
+  mods: (process.env.MODS || "6285607831410")
     .split(", ")
     .map((number) => `${number}@s.whatsapp.net`),
   gkey: process.env.GOOGLE_API_KEY || "",
   chatBotUrl: process.env.CHAT_BOT_URL || "",
   gifApi: process.env.TENOR_API_KEY || "",
-  geniusKey: process.env.GENIUS_KEY || "",
+  geniusKey: process.env.GENIUS_KEY || "uFQrwFdprdqQCGqg7fjqoKsnSE",
   malUsername: process.env.MAL_USERNAME || "",
   malPassword: process.env.MAL_PASSWORD || "",
 });
