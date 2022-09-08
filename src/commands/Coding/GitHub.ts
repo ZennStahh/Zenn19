@@ -77,7 +77,7 @@ export default class Command extends BaseCommand {
             }
 
             // prepare text information
-            text += `🌐 *URL:* http://github.com/${username}\n`
+            text += `📜 *URL:* http://github.com/${username}\n`
             text += `🌟 *Username:* ${userInfo.name}\n`
             if (userInfo.email !== null) text += `📧 *Email:* ${userInfo.email}\n`
             if (userInfo.location !== null) text += `📍 *Location:* ${userInfo.location}\n`
@@ -99,7 +99,7 @@ export default class Command extends BaseCommand {
             }
 
             // prepare text information
-            text += `🌐 *URL :* http://github.com/${username}/${repo}\n`
+            text += `📜 *URL :* http://github.com/${username}/${repo}\n`
             text += `📂 *Repository Name :* ${repoInfo.name}\n`
             text += `❄ *Description:* ${repoInfo.description ?? '-'}\n`
             text += `🎀 *License:* ${repoInfo.license.name}\n`
