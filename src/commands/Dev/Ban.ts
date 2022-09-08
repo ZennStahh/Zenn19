@@ -28,7 +28,7 @@ export default class Command extends BaseCommand {
         for (const user of M.mentioned) {
             if (immortals.includes(user)) {
                 // tagged.push(user)
-                text += `🟨 @${user.split('@')[0]} is an immortal, can't be banned\n`
+                text += `⚡ @${user.split('@')[0]} is an immortal, can't be banned\n`
                 continue
             }
             const data = await this.client.getUser(user)
@@ -36,12 +36,12 @@ export default class Command extends BaseCommand {
             // const username = info.notify || info.vname || info.name || user.split('@')[0]
             // const username = user.split('@')[0]
             if (data?.ban) {
-                text += `🟨 @${user.split('@')[0]}: Already Banned\n`
+                text += `⚠️ @${user.split('@')[0]}: Already Banned\n`
                 continue
             }
             await this.client.blockUser(user);
             await this.client.banUser(user)
-            text += `🟥 @${user.split('@')[0]}: Banned\n`
+            text += `🗡️ @${user.split('@')[0]}: Banned\n`
         }
         await M.reply(
             `${text}`,
