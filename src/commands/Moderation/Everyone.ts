@@ -40,7 +40,7 @@ export default class Command extends BaseCommand {
     if (flags.includes("--s") || flags.includes("--sticker")) {
       const sticker: any = await new Sticker(random, {
         pack: "READ QUOTED MESSAGE",
-        author: "🌟 Chitoge 🌟",
+        author: "👑 ZennBot 👑",
         quality: 90,
         type: "default",
         categories: ["🎊"],
@@ -53,9 +53,9 @@ export default class Command extends BaseCommand {
       ));
     } else if (flags.includes("--h") || flags.includes("--hide")) {
       return void (await M.reply(
-        `*🎀 Group: ${M.groupMetadata?.subject}*\n🎏 *Members: ${
+        `*💨 Group: ${M.groupMetadata?.subject}*\n📜 *Members: ${
           members.length
-        }*\n📢 *Announcer: @${M.sender.jid.split("@")[0]}*\n🧧 *Tags: HIDDEN*`,
+        }*\n📢 *Announcer: @${M.sender.jid.split("@")[0]}*\n🌻 *Tags: HIDDEN*`,
         undefined,
         undefined,
         M.groupMetadata?.participants.map((user) => user.jid)
