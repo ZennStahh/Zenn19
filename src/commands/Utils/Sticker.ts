@@ -75,13 +75,13 @@ export default class Command extends BaseCommand {
 							return categories;
 						}, new Array<Categories>());
 						categories.length = 2;
-						if (!categories[0]) categories.push("❤", "🌹");
+						if (!categories[0]) categories.push("💸", "♻️");
 						return categories;
 					})();
 					return {
 						categories,
-						pack: pack[1] || "🌟 Here you go ",
-						author: pack[2] || "Chitoge 🌟",
+						pack: pack[1] || " By Zen ",
+						author: pack[2] || "ZennBot ☁️",
 						quality,
 						type: StickerTypes[
 							parsedArgs.flags.includes("--crop") ||
